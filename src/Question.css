@@ -1,0 +1,49 @@
+/* Question.css */
+
+.Question {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.Question p {
+  margin-bottom: 10px;
+}
+
+.Question form {
+  margin-top: 10px;
+}
+
+.Question input[type="text"] {
+  width: calc(100% - 110px);
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.Question button {
+  padding: 10px 20px;
+  background-color: #1877f2; /* Facebook blue */
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Question button:hover {
+  background-color: #1366d6; /* Darker shade of Facebook blue */
+}
+
+.Question ul {
+  padding-left: 20px;
+}
+
+.Question ul li {
+  list-style-type: disc;
+}

@@ -1,0 +1,21 @@
+
+.QuestionList {
+    text-align: center;
+    
+  }
+  
+  .QuestionList h2 {
+    font-size: 20px;
+    color: #1877f2; 
+    margin-bottom: 20px;
+  }
+  
+  .QuestionList ul {
+    padding: 0;
+  }
+  
+  .QuestionList li {
+    list-style-type: none;
+    margin-bottom: 20px;
+  }
+  
