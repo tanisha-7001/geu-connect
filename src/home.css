@@ -1,0 +1,6 @@
+#im{
+    background-image: url("C:/Users/Tanisha Singh/Desktop/pro/demo/public/img.png");
+    background-repeat: no-repeat;
+    background-position: center ; /* Shift the background image to the right */
+    padding-top: 200px;
+}

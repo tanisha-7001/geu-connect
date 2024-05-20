@@ -1,14 +1,15 @@
 // HomePage.js
 import React from 'react';
 import Nav from './Nav.js';
+import './home.css';
 function HomePage() 
 {
   return (
     <> 
       {<Nav/>}
-      <div style={{ textAlign: "center", paddingTop: "50px" }}>
-      <h2>Welcome to the Home Page</h2>
-      <p>This is a simple example of a home page.</p>
+      <div id="im"></div>
+      <div style={{fontSize:"20px",color:"black",textAlign: "center", paddingTop: "20px" }}>
+      <h1 style={{marginLeft:"160px",marginTop:"30px"}}>Welcome to the Home Page of GEU - CONNECT</h1>
       </div>
     </>
   );
