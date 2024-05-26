@@ -1,7 +1,6 @@
 // HomePage.js
 import React from 'react';
 import Nav from './Nav.js';
-import './home.css';
 function HomePage() 
 {
   return (
