@@ -1,11 +1,7 @@
-import { Amplify } from 'aws-amplify';
-import config from './aws-exports';
-Amplify.configure(config);
-
 import { withAuthenticator } from '@aws-amplify/ui-react';
-import HomePage from './HomePage';
-import React from 'react';
 import '@aws-amplify/ui-react/styles.css';
+import HomePage from './HomePage';
+ 
 
 
 function Login({ signOut, user }) {
