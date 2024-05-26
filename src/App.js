@@ -4,12 +4,14 @@ import HomePage from './HomePage';
 import ChatForum from './ChatForum';
 import './App.css'; 
 import PlacementPrep from './PlacementPrep';
-
+import Login from './Login';
 function App() {
   return (
     <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Login />} />
+
+          <Route path="/home" element={<HomePage />} />
           <Route path="/chat-forum" element={<ChatForum />} />
           <Route path="/placement-prep" element={<PlacementPrep/>}/>
           <Route path="/chat-forum/placement-prep" element={<PlacementPrep/>}/>
