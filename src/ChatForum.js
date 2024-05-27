@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ChatForum.css'; 
+
 import QuestionForm from './QuestionForm';
 import QuestionList from './QuestionList';
 import Nav from './Nav';
@@ -25,12 +26,14 @@ function ChatForum() {
   };
 
   return (
-    <div className="ChatForum">
+    <>
         <Nav/>
+        <div className="ChatForum">
       <h1>Chat Forum</h1>
       <QuestionForm addQuestion={addQuestion} />
       <QuestionList questions={questions} addAnswer={addAnswer} />
     </div>
+    </>
   );
 }
 
