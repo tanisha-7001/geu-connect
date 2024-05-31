@@ -1,14 +1,15 @@
 // QuestionForm.js
 import React, { useState } from 'react';
-import './QuestionForm.css'; // Import QuestionForm-specific styles
+import './QuestionForm.css';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 
-function QuestionForm({ addQuestion }) {
+function QuestionForm({ addQuestion, user }) {
   const [text, setText] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!text.trim()) return;
-    addQuestion({ text });
+    addQuestion({ text, userName: user.username }); // Include the username in the question object
     setText('');
   };
 
@@ -21,8 +22,8 @@ function QuestionForm({ addQuestion }) {
         onChange={(e) => setText(e.target.value)}
       />
       <button type="submit">Submit</button>
-    </form>
+     </form>
   );
 }
 
-export default QuestionForm;
+export default withAuthenticator(QuestionForm);

@@ -15,6 +15,9 @@
       "auth": {
         "demo8d6e5134": {},
         "userPoolGroups": {}
+      },
+      "api": {
+        "demo": {}
       }
     }
   }

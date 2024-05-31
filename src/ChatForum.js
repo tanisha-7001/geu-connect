@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
-import './ChatForum.css'; 
-
+// ChatForum.js
+import React from 'react';
+import { useLocalStorage } from 'react-use';
 import QuestionForm from './QuestionForm';
 import QuestionList from './QuestionList';
 import Nav from './Nav';
-function ChatForum() {
-  const [questions, setQuestions] = useState([]);
+import './ChatForum.css';
+import { withAuthenticator } from '@aws-amplify/ui-react';
+
+
+function ChatForum({ user }) {
+  const [questions, setQuestions] = useLocalStorage('questions', []);
 
   const addQuestion = (question) => {
-    setQuestions([...questions, { ...question, id: questions.length }]);
+    const newQuestion = { ...question, id: questions.length + 1, userName: user.username };
+    setQuestions([...questions, newQuestion]);
   };
 
   const addAnswer = (questionId, answerText) => {
@@ -27,14 +32,13 @@ function ChatForum() {
 
   return (
     <>
-        <Nav/>
-        <div className="ChatForum">
-      <h1>Chat Forum</h1>
-      <QuestionForm addQuestion={addQuestion} />
-      <QuestionList questions={questions} addAnswer={addAnswer} />
-    </div>
+      <Nav />
+      <div className="ChatForum">
+        <h1>Chat Forum</h1>
+        <QuestionForm addQuestion={addQuestion} user={user} />
+        <QuestionList questions={questions} addAnswer={addAnswer} />
+      </div>
     </>
   );
 }
-
-export default ChatForum;
+ export default withAuthenticator(ChatForum);

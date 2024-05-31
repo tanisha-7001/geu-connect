@@ -1,36 +1,25 @@
-/* Ats.css */
-
+.ats-container h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:35px;
+    color:rgb(54, 50, 50)
+}
 .ats-container {
-    margin-left: 750px;
+    margin-left: 450px;
 }
 
-.file-upload {
-     margin-top:100px;
-    margin-bottom: 10px;
+.ats-container button{
+    color : white;
+    font-size:23px;
+    background-color:rgb(52, 50, 49)
 }
 
-.file-upload input[type="file"] {
-    display: none;
-    
-}
-
-.file-upload label {
-    font-size:30px;
-    display: inline-block;
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.file-upload label:hover {
-    background-color: #121416;
-}
-
-p
-{ 
-    display: inline-block; 
-    font-size: 40px; 
-    color:rgb(20, 5, 5)
+.ats-container p
+{
+    border-radius:20%;
+    padding:10px;
+    margin-left:320px;
+    font-size:35px;
+    background-color: rgb(42, 38, 38);
+    color:white;
+    display:inline-block
 }
